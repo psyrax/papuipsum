@@ -1,0 +1,19 @@
+@-webkit-keyframes fade-in{
+    from{
+        opacity:1;
+        font-size: 0;
+    }
+    to{
+        opacity:0;
+        font-size: 20em;
+    }
+}
+.papuLoader{
+    font-size: 0;
+    font-weight: bold;
+    position: absolute;
+    left: 10%; 
+}
+.papuShow{
+    -webkit-animation:fade-in 1s;
+}

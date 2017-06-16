@@ -7,29 +7,38 @@ jQuery(document).ready(function($){
     var initialPapugraph = getRandomInt(3, 6);
 
     function getRandomInt(min, max) {
-    	return Math.floor(Math.random() * (max - min + 1)) + min;
-	};
+      return Math.floor(Math.random() * (max - min + 1)) + min;
+  };
 
-	function buildPapuParagraph(){
-		var papus = getRandomInt(minPapuSize, maxPapuSize);
-		var papuGraph = '';
-		for (var i = papus - 1; i >= 0; i--) {
-			var currentPapu = getRandomInt(0, papuLength-1);
-			papuGraph += papuIpsum[currentPapu];
-		};
-		return papuGraph;
-	}
+  function buildPapuParagraph(){
+    var papus = getRandomInt(minPapuSize, maxPapuSize);
+    var papuGraph = '';
+    for (var i = papus - 1; i >= 0; i--) {
+      var currentPapu = getRandomInt(0, papuLength-1);
+      papuGraph += papuIpsum[currentPapu];
+    };
+    return papuGraph;
+  }
 
-	function buildTotalPapu(size){
-		var papuGraphs = '';
-		for (var i = size - 1; i >= 0; i--) {
-			papuGraphs += '<p>' + buildPapuParagraph() + '</p>';
-		};
-		return papuGraphs;
-	}
+  function buildTotalPapu(size){
+    var papuGraphs = '';
+    for (var i = size - 1; i >= 0; i--) {
+      papuGraphs += '<p>' + buildPapuParagraph() + '</p>';
+    };
+    return papuGraphs;
+  }
 
 
-	var initialPapu = buildTotalPapu(initialPapugraph);
-	console.log(initialPapu);
-	$('#papuHolder').html(initialPapu);
+  var initialPapu = buildTotalPapu(initialPapugraph);
+  $('#papuHolder').html(initialPapu);
+  $('.papuGenerator').on('click', function(event){
+    event.preventDefault();
+    $('.papuLoader').addClass('papuShow');
+    var papuParrafosInput = parseInt($('#papuparrafos').val());
+    var papuParrafosOutput = buildTotalPapu(papuParrafosInput);
+    $('#papuHolder').html(papuParrafosOutput);
+    setTimeout(function(){
+      $('.papuLoader').removeClass('papuShow');
+    }, 1100);
+  })
 });

@@ -6,12 +6,13 @@ gulp.task('default', function () {
 
     browserSync.init({
         server: {
-            baseDir: "./"
+            baseDir: "./src"
         }
     });
 
-    gulp.watch("./*.html", ['html-watch']);
-    gulp.watch("./*.js", ['js-watch']);
+    gulp.watch("./src/*.html", ['html-watch']);
+    gulp.watch("./src/*.js", ['js-watch']);
+    gulp.watch("./src/*.css", ['css-watch']);
 });
 
 gulp.task('html-watch',function (done) {
@@ -20,6 +21,12 @@ gulp.task('html-watch',function (done) {
 });
 
 gulp.task('js-watch',function (done) {
+    browserSync.reload();
+    done();
+});
+
+
+gulp.task('css-watch',function (done) {
     browserSync.reload();
     done();
 });

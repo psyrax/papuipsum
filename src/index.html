@@ -4,14 +4,37 @@
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
+    <title>Papu Ipsum</title>
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="./app.css">
   </head>
-  <body>
+  <body style="padding-top: 2em;">
     <div class="container">
       <div class="row">
-        <div class="col" id="papuHolder">
+        <div class="col">
+          <div class="jumbotron">
+            <h1 class="display-3">Papu Ipsum!</h1>
+            <p class="lead">Stemen se mamut con un generador de papu ipsum, picale al botom 100% real no faik para generar tus momos.</p>
+            <hr class="my-4">
+            <form class="form-inline">
+              <div class="form-group">
+                <label class="sr-only">Cuantos parrafos papu?</label>
+                <p class="form-control-static">Cuantos parrafos random papu?</p>
+              </div>
+              <div class="form-group mx-sm-3">
+                <label for="papuparrafos" class="sr-only">Parrafos</label>
+                <input type="text" class="form-control" id="papuparrafos" value="5">
+              </div>
+              <button type="submit" class="btn btn-primary papuGenerator">Oie shi :V</button>
+              <span class="papuLoader">PAPU!</span>
+            </form>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col">
+          <div id="papuHolder"></div>
         </div>
       </div>
     </div>

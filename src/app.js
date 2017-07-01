@@ -23,7 +23,7 @@ jQuery(document).ready(function($){
   function buildTotalPapu(size){
     var papuGraphs = '';
     for (var i = size - 1; i >= 0; i--) {
-      papuGraphs += '<p>' + buildPapuParagraph() + '</p>';
+      papuGraphs += '<p class="text-justify">' + buildPapuParagraph() + '</p>';
     };
     return papuGraphs;
   }

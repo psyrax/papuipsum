@@ -1,0 +1,57 @@
+@-webkit-keyframes fade-in{
+    from{
+        opacity:1;
+        font-size: 0;
+    }
+    to{
+        opacity:0;
+        font-size: 20em;
+    }
+}
+.papuLoader{
+    font-size: 0;
+    font-weight: bold;
+    position: absolute;
+    left: 10%; 
+}
+.papuHolder p{
+    text-align: justify;
+}
+.papuShow{
+    -webkit-animation:fade-in 1s;
+}
+.papuGenerator, .papuGenerator:focus{
+    background-color: #CFA843;
+    border-color: #CFA843;
+    color: #191C25;
+}
+
+.papuGenerator:hover{
+    background-color: #BE9135;
+    border-color: #BE9135;
+    color: #191C25;
+}
+
+body{
+    background-color: #191C25 !important;
+    color: #CFA843;
+}
+hr{
+    border-color: #CFA843;
+}
+
+.papuInstructions{
+    margin-top: 1em;
+}
+
+.logoTematico{
+    max-height: 50px !important;
+}
+
+.linkTematico{
+    color: #CE550F;
+}
+.linkTematico:hover, .linkTematico:focus, .linkTematico:active{
+    text-decoration: none;
+    color: #CE550F;
+}
